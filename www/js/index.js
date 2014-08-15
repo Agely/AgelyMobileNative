@@ -61,13 +61,14 @@ $('#form_login').submit(function(event){
 		//limpa a sessão javascript por completo
 		localStorage.clear();
 	}
+	testeAjax();
 });
 
 function testeAjax(){
 	
 	jQuery.ajax({  
 		type: "POST",  
-		url: "http://sistema.agely.com.br/mobile_teste/mobile?tela=login", 
+		url: "http://sistema.agely.com.br/mobile_teste/mobile?dominio="+localStorage.getItem('dominio')+"&usuario="+localStorage.getItem('usuario')+"&senha="+localStorage.getItem('senha'), 
 		beforeSend: function() {
 		
 			$("#recebe_ajax").html("recebendo...");
