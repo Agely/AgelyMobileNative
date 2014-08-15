@@ -18,16 +18,26 @@
         
         <div data-role="page" id="one">
         
-            <div data-role="header" data-position='fixed'>
+            <div data-role="header" data-position="fixed">
                
                 <h1>Agely Mobile</h1>
-                <span class='ui-btn-right'><img width='30' src='img/logo.png' /></span>
+                <span class="ui-btn-right"><img width="30" src="img/logo.png" /></span>
             </div>
         
             <div role="main" class="ui-content">
                 
-                <h1>Teste de chamada por <a href="javascript:testeAjax();">JSON</a></h1>
-                <div id="recebe_ajax"></div>
+                <form id="form_login" action="" method="post">
+                    <input name="tela" value="fazLogin" type="hidden">
+                    <input data-clear-btn="true" name="dominio" id="dominio" value="" placeholder="Domínio" type="text">
+                    <input data-clear-btn="true" name="usuario" id="usuario" value="" placeholder="Usuário" type="text">
+                    <input data-clear-btn="true" name="senha" id="senha" value="" placeholder="Senha" type="password">
+                    <select name="lembrar" id="lembrar" data-role="" data-mini="true">
+                    <option value="off">Esquecer</option>
+                    	
+                        <option selected value="on">Lembrar</option>
+                    </select>
+                    <input value="Entrar" data-theme="a" data-ajax="false" type="submit">
+				</form>
             </div>
         </div>
         

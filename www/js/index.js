@@ -32,9 +32,35 @@ var app = {
 
 /*ZONA JQUERY*/
 
-$(document).ready(function() {
-    
-	//alert("teste do ready");
+//quando o documento for carregado
+	$(document).ready(function(){
+
+	//verifica se o lembrar está on
+	if(localStorage.getItem('lembrar')=='on'){
+
+		//autopreenche os campos do formulário
+		$('#dominio').val(localStorage.getItem('dominio'));
+		$('#usuario').val(localStorage.getItem('usuario'));
+		$('#senha').val(localStorage.getItem('senha'));
+	}
+});
+
+//quando o formulário for dado submit
+$('#form_login').submit(function(event){
+
+	//verifica se o lembrar está on
+	if($('#lembrar').val()=='on'){
+
+		//preenche as variáveis de sessão javascript com os valores dos campos html
+		localStorage.setItem('dominio', $('#dominio').val());
+		localStorage.setItem('usuario', $('#usuario').val());
+		localStorage.setItem('senha', $('#senha').val());
+		localStorage.setItem('lembrar', $('#lembrar').val());
+	}else{
+
+		//limpa a sessão javascript por completo
+		localStorage.clear();
+	}
 });
 
 function testeAjax(){
