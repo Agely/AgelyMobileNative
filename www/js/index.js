@@ -34,7 +34,7 @@ var app = {
 
 $(document).ready(function() {
     
-	alert("teste do ready");
+	//alert("teste do ready");
 });
 
 function testeAjax(){
