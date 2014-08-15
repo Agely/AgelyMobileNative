@@ -27,15 +27,26 @@
             <div role="main" class="ui-content">
                 
                 <form id="form_login" action="" method="post">
-                    <input name="tela" value="fazLogin" type="hidden">
+
                     <input data-clear-btn="true" name="dominio" id="dominio" value="" placeholder="Domínio" type="text">
                     <input data-clear-btn="true" name="usuario" id="usuario" value="" placeholder="Usuário" type="text">
                     <input data-clear-btn="true" name="senha" id="senha" value="" placeholder="Senha" type="password">
-                    <select name="lembrar" id="lembrar" data-role="" data-mini="true">
-                    <option value="off">Esquecer</option>
-                    	
-                        <option selected value="on">Lembrar</option>
-                    </select>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    	<tr>
+                        	<td align="left" valign="middle">
+                        		
+                                Lembrar:
+                        	</td>
+                            <td align="right" valign="middle">
+                                
+                                <select name="lembrar" id="lembrar" data-role="slider" data-mini="true">
+                                
+                                    <option value="off">NÃO</option>
+                                    <option selected value="on">SIM</option>
+                                </select>
+                    		</td>
+                        </tr>
+                    </table>        
                     <input value="Entrar" data-theme="a" data-ajax="false" type="submit">
 				</form>
             </div>
