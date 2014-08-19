@@ -68,8 +68,9 @@ function testeAjax(){
 	alert('url: "http://sistema.agely.com.br/mobile_teste/mobile?dominio='+localStorage.getItem("dominio")+'&usuario='+localStorage.getItem("usuario")+'&senha='+localStorage.getItem("senha"));
 	jQuery.ajax({  
 		type: "GET",  
+		url: "http://sistema.agely.com.br/mobile_teste/mobile?dominio=grupoduzani&usuario=francisco&senha=123",
 		//url: "http://127.0.0.1:8888/mobile?dominio="+localStorage.getItem('dominio')+"&usuario="+localStorage.getItem('usuario')+"&senha="+localStorage.getItem('senha'), 
-		url: "http://sistema.agely.com.br/mobile_teste/mobile?dominio="+localStorage.getItem('dominio')+"&usuario="+localStorage.getItem('usuario')+"&senha="+localStorage.getItem('senha'), 
+		//url: "http://sistema.agely.com.br/mobile_teste/mobile?dominio="+localStorage.getItem('dominio')+"&usuario="+localStorage.getItem('usuario')+"&senha="+localStorage.getItem('senha'), 
 		beforeSend: function() {
 		
 			$("#recebe_ajax").html("recebendo...");
